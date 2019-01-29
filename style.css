@@ -1,0 +1,149 @@
+
+
+body {
+    background: #f4f3f3;
+    font-family: 'Special Elite', cursive;
+    color: #f4f3f3;
+  
+
+}
+
+a { color: inherit;
+transition: all .7s; } 
+
+a:hover { color: inherit; 
+    letter-spacing: 4px;
+} 
+
+.jumbotron {
+    background: #393e46;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.hero-text {
+    font-family: 'Special Elite', cursive;
+    color: #f4f3f3;
+    padding-top: 150px;
+
+}
+
+.heading {
+    font-size: 50px;
+    padding: 50px 0 150px 0;
+}
+
+.hero {
+    max-height: 900px;
+    width: auto;
+}
+
+.hero-links {
+    padding: 50px 0;
+    text-decoration: underline;
+}
+
+.hero-links hr {
+    background-color: #f4f3f3;
+    width: 40px;
+    margin: -20px 0 30px 0;
+}
+
+.music-blurb{
+    padding-top: 80px;
+}
+
+.icon-row {
+    margin-left: 15px;
+}
+
+.bc {
+    height: 50px;
+}
+.icon-pad {
+    padding-right: 20px;
+}
+
+.apple-icon {
+    margin-top: 5px;
+}
+
+.spotify-icon {
+    width: 50px;
+}
+.music-section {
+    padding: 70px;
+    height: 900px;
+    width: auto;
+    background-image:  linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)), url("https://images.pexels.com/photos/696407/pexels-photo-696407.jpeg?cs=srgb&dl=armchair-art-chair-696407.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.spotify-container {
+    background-color: #dfdfdf;
+    padding: 10px;
+    width: 320px;
+    height: 298px;
+    border-radius: 3px;
+    margin: 0 auto;
+
+}
+
+.art {
+    height: 900px;
+    background-image: url("https://images.pexels.com/photos/568021/pexels-photo-568021.jpeg?cs=srgb&dl=adult-alone-black-and-white-568021.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+    filter: invert(.75);
+    padding: 70px;
+}
+
+.black  {
+    color: white;
+}
+
+.writing {
+    height: 900px;
+    background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2018-08/23/15/asset/buzzfeed-prod-web-01/sub-buzz-22758-1535052628-1.jpg?downsize=600:*&output-format=auto&output-quality=auto");
+    background-size: cover;
+    background-position: top center;
+    /* filter: grayscale(1); */
+    padding: 70px;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-text {
+        padding-top: 10px;
+    }
+
+    .hero-links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .heading {
+        padding: 30px;
+    }
+
+    .music-blurb {
+        padding-top: 0px;
+        text-align: center;
+    }
+    .music-section {
+        padding: 30px;
+        height: 750px;
+    }
+
+   
+
+    .icon-row {
+       display: flex;
+       justify-content: center;
+       margin-left: 0;
+       padding: 25px 0;
+    }
+
+}

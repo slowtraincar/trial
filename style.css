@@ -239,7 +239,9 @@ footer {
         display: flex;
         justify-content: space-around;
     }
-
+    a:hover { color: inherit; 
+        letter-spacing: 3px;
+    } 
     .heading {
         padding: 30px;
     }

@@ -1,7 +1,11 @@
 
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
-    background: #f4f3f3;
+    background: #393e46;
     font-family: 'Special Elite', cursive;
     color: #f4f3f3;
   
@@ -9,16 +13,17 @@ body {
 }
 
 a { color: inherit;
-transition: all .7s; } 
+transition: all .7s;
+text-decoration: none; } 
 
 a:hover { color: inherit; 
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 } 
 
-.jumbotron {
-    background: #393e46;
-    margin-bottom: 0;
-    border-radius: 0;
+.hero-container {
+  height: 900px;
+  padding-top: 70px ;
+  padding-bottom: 20px;
 }
 .hero-text {
     font-family: 'Special Elite', cursive;
@@ -37,9 +42,95 @@ a:hover { color: inherit;
     width: auto;
 }
 
+a.collision {
+    color: #f4f3f3;
+    text-decoration: none;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+a.collision::before,
+a.collision::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #8f1d14;
+    top: 50%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+a.collision::before {
+    transform: translate(-50%, -50%);
+    left: 0px;
+}
+a.collision::after {
+    transform: translate(-50%, -50%);
+    right: -10px;
+}
+
+a.collision:hover::before {
+    animation: move-left .8s both;
+    animation-direction: alternate;
+}
+
+a.collision:hover::after {
+    animation: move-right .8s both;
+    animation-direction: alternate;
+}
+
+@keyframes move-left {
+0% {
+    left: -20px;
+}
+
+50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+100% {
+    left: 50%;
+    height: 400px;
+    width: 400px;
+}
+}
+
+@keyframes move-right {
+    0% {
+        right: 20px;
+    }
+    
+    50% {
+        right: 35%;
+        width: 20px;
+        height: 20px;
+    }
+    
+    100% {
+        right: 35%;
+        height: 100px;
+        width: 100px;
+    }
+
+} 
+
+
+
+
 .hero-links {
     padding: 50px 0;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .hero-links hr {
@@ -114,6 +205,31 @@ a:hover { color: inherit;
     color: black;
 }
 
+.video { 
+    
+    background-image: linear-gradient(
+        rgba(65, 10, 0, 0.45), 
+        rgba(65, 10, 0, 0.45)
+      ), url("img/tv.jpg");
+    background-size: cover;
+    background-position: center;
+    /* filter: grayscale(1); */
+    padding: 70px;
+    color: black;
+}
+
+.youtube {
+    margin-top: -60px;
+    padding: 20px;
+   
+}
+
+footer {
+    padding: 30px;
+}
+
+
+
 @media only screen and (max-width: 600px) {
     .hero-text {
         padding-top: 10px;
@@ -137,8 +253,27 @@ a:hover { color: inherit;
         height: 750px;
     }
 
-   
+   a.collision {
+       width: 85px;
+   }
 
+   a.collision::before {
+    left: -5px;
+}
+
+a.collision::after {
+    right: -15px;
+}
+
+.youtube {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.video {
+    padding: 60px 10px;
+    height: 90vh;
+   
+}
     .icon-row {
        display: flex;
        justify-content: center;
